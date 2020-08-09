@@ -1,0 +1,70 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --target lib\main.dart -d emulator-5554 --track-widget-creation --dart-define=flutter.inspector.structuredErrors=true --start-paused
+
+## exception
+
+StateError: Bad state: No element
+
+```
+#0      Iterable.first (dart:core/iterable.dart:520:7)
+#1      buildGradleApp (package:flutter_tools/src/android/gradle.dart:479:55)
+#2      _rootRunUnary (dart:async/zone.dart:1192:38)
+#3      _CustomZone.runUnary (dart:async/zone.dart:1085:19)
+#4      _FutureListener.handleValue (dart:async/future_impl.dart:141:18)
+#5      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:682:45)
+#6      Future._propagateToListeners (dart:async/future_impl.dart:711:32)
+#7      Future._completeWithValue (dart:async/future_impl.dart:526:5)
+#8      _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:36:15)
+#9      _completeOnAsyncReturn (dart:async-patch/async_patch.dart:298:13)
+#10     _DefaultProcessUtils.stream (package:flutter_tools/src/base/process.dart)
+#11     _rootRunUnary (dart:async/zone.dart:1192:38)
+#12     _CustomZone.runUnary (dart:async/zone.dart:1085:19)
+#13     _FutureListener.handleValue (dart:async/future_impl.dart:141:18)
+#14     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:682:45)
+#15     Future._propagateToListeners (dart:async/future_impl.dart:711:32)
+#16     Future._completeWithValue (dart:async/future_impl.dart:526:5)
+#17     Future._asyncComplete.<anonymous closure> (dart:async/future_impl.dart:556:7)
+#18     _rootRun (dart:async/zone.dart:1184:13)
+#19     _CustomZone.run (dart:async/zone.dart:1077:19)
+#20     _CustomZone.runGuarded (dart:async/zone.dart:979:7)
+#21     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1019:23)
+#22     _microtaskLoop (dart:async/schedule_microtask.dart:43:21)
+#23     _startMicrotaskLoop (dart:async/schedule_microtask.dart:52:5)
+#24     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#25     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, v1.17.3, on Microsoft Windows [Version 10.0.18362.836], locale en-IN)
+    • Flutter version 1.17.3 at C:\flutter
+    • Framework revision b041144f83 (5 weeks ago), 2020-06-04 09:26:11 -0700
+    • Engine revision ee76268252
+    • Dart version 2.8.4
+
+[!] Android toolchain - develop for Android devices (Android SDK version 29.0.3)
+    • Android SDK at C:\Users\ASSUS\AppData\Local\Android\sdk
+    • Platform android-29, build-tools 29.0.3
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+    ! Some Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+[✓] Android Studio (version 3.5)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin version 44.0.1
+    • Dart plugin version 191.8593
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+
+[✓] VS Code (version 1.46.1)
+    • VS Code at C:\Users\ASSUS\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.12.1
+
+[✓] Connected device (1 available)
+    • Android SDK built for x86 • emulator-5554 • android-x86 • Android 8.1.0 (API 27) (emulator)
+
+! Doctor found issues in 1 category.
+```
